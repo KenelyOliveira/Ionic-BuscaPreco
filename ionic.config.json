@@ -1,0 +1,7 @@
+{
+  "name": "BuscaPreco",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
