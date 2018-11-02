@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <ion-title><ion-icon name="help-circle"></ion-icon>  Ajuda</ion-title>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="fundo">
+  <ion-list>
+    <ion-item *ngFor="let d of diseases; let i=index" text-wrap (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}" class="fundo">
+    <h3>
+      {{d.title}}
+      <ion-icon color="success" item-right [name]="isGroupShown(i) ? 'arrow-dropdown' : 'arrow-dropright'"></ion-icon>
+    </h3>
+    <div *ngIf="isGroupShown(i)">{{d.description}}</div>
+  </ion-item>
+  </ion-list>
+</ion-content>
