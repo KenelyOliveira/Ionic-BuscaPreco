@@ -21,9 +21,13 @@
 .gridData {
     font-family: 'roboto';
     font-size: medium;
-    //background-color: #2F4FA6;
-    //color: #ffffff;
+}
 
+.textoLeitor {
+    font-family: 'roboto';
+    font-size: 5vw;
+    word-wrap: break-word;
+    color: #ffffff;
 }
 
 // http://ionicframework.com/docs/theming/

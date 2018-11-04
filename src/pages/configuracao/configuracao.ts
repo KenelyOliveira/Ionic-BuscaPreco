@@ -2,25 +2,15 @@ import { Component } from '@angular/core';
 import { FileChooser } from '@ionic-native/file-chooser';
 import { NavParams, ModalController, ViewController, ToastController } from 'ionic-angular';
 import { HttpClient } from '@angular/common/http';
- 
-class Configuracao {
-  nomeLoja: string = "";
-  tipoConfiguracao: number;
-  urlAPI: string = "";
-  caminhoArquivo: string = "";
-}
+import { Configuracao } from '../../model/configuracao'; 
 
 @Component({
-  selector: 'page-configuracao',
   templateUrl: 'configuracao.html'
 })
 export class ConfiguracaoPage {
   public config = new Configuracao(); 
 
   constructor(private fileChooser: FileChooser, private http:HttpClient, private toastCtrl: ToastController, private modalCtrl: ModalController) {
-    this.config.nomeLoja = "Açaí do Roberto";
-    this.config.tipoConfiguracao = 2;
-    this.config.urlAPI = "http://localhost:8266/api/produtos";
   }
 
   selecionarArquivo() {
