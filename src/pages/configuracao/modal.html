@@ -1,0 +1,32 @@
+<ion-content padding class="fundo" style="overflow-y: hidden;">
+  <ion-buttons end>
+    <button ion-button (click)="dismiss()">
+        <ion-icon name="md-close"></ion-icon>
+    </button>
+  </ion-buttons>
+
+  <ion-grid style="overflow-y: hidden;">
+    <ion-row class="gridHeader">
+      <ion-col col-4>
+        <span>Código de Barras</span>
+      </ion-col>
+      <ion-col col-6>
+        <span>Descrição</span>
+      </ion-col>
+      <ion-col col-2>
+        <span>Preço</span>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngFor="let produto of produtos" class="gridData">
+      <ion-col col-4>
+        {{ produto.CodigoBarra }}
+      </ion-col>
+      <ion-col col-6>
+        {{ produto.Descricao }}
+      </ion-col>
+      <ion-col col-2>
+        {{ produto.Valor }}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

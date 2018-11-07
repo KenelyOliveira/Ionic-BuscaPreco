@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      <ion-title><ion-icon name="settings"></ion-icon>  Configurações</ion-title>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="fundo">
+  <br />
+  <ion-item>
+    <ion-input [(ngModel)]="config.nomeLoja" id="NomeLoja" placeholder="Nome da Loja"></ion-input>
+  </ion-item>
+<br />
+<br />
+
+<ion-segment [(ngModel)]="config.tipoConfiguracao" color="light">
+  <ion-segment-button value="1" >
+    Arquivo de Texto
+  </ion-segment-button>
+  <ion-segment-button value="2">
+    API
+  </ion-segment-button>
+</ion-segment>
+<br />
+<br />
+<div *ngIf="config.tipoConfiguracao==1" class="m-top-10p">
+    <ion-item>
+      <ion-input [(ngModel)]="config.caminhoArquivo" id="Caminho" placeholder="Caminho"></ion-input>
+      <button ion-button clear item-right (click)="selecionarArquivo()">Selecionar</button>
+    </ion-item>
+    <div class="float-right">
+      <button ion-button round class="m-top-10p" (click)="testarArquivo()">Testar</button>
+    </div>
+</div>
+
+<div *ngIf="config.tipoConfiguracao==2" class="m-top-10p">
+    <ion-item>
+      <ion-input [(ngModel)]="config.urlAPI" id="URL" placeholder="URL (método GET)"></ion-input>
+    </ion-item>
+    <div class="float-right">
+      <button ion-button round class="m-top-10p" (click)="testarAPI()">Testar API</button>
+    </div>
+</div>
+
+<ion-footer no-border>
+  <div class="float-right">
+    <ion-item class="fundo">
+      <button ion-button round large class="m-b-r">Salvar</button>
+    </ion-item>
+  </div>
+</ion-footer>
+</ion-content>
+

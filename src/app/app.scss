@@ -1,3 +1,35 @@
+.fundo {
+    background-color: #5f9ea0;
+}
+.float-right {
+    float: right;
+}
+
+.erro {
+    > div {
+        background-color: #FF0000 !important;
+    }
+}
+
+.gridHeader {
+    font-family: 'roboto';
+    font-size: large;
+    background-color: #2F4FA6;
+    color: #ffffff;
+}
+
+.gridData {
+    font-family: 'roboto';
+    font-size: medium;
+}
+
+.textoLeitor {
+    font-family: 'roboto';
+    font-size: 5vw;
+    word-wrap: break-word;
+    color: #ffffff;
+}
+
 // http://ionicframework.com/docs/theming/
 
 
